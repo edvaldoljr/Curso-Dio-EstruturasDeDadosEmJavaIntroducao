@@ -1,4 +1,4 @@
-package com.projeto.atribuicaoreferencia;
+package com.projeto.aula1.atribuicaoreferencia;
 
 public class Main {
 

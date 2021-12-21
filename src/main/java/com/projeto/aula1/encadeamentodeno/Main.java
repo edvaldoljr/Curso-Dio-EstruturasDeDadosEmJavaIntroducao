@@ -1,4 +1,4 @@
-package com.projeto.encadeamentodeno;
+package com.projeto.aula1.encadeamentodeno;
 
 public class Main {
 
