@@ -4,11 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-         //Criando e instanciando o no1
-         No no1 = new No("Conteudo no1");
+        //Criando e instanciando o no1
+        No<String> no1 = new No<>("Conteudo no1");
 
-         //Criando e instanciando o no2
-         No no2 = new No("Conteudo no2");
+        //Criando e instanciando o no2
+        No<String> no2 = new No<>("Conteudo no2");
 
         /**
          * Vamos fazer o encadeamento do no1 com o no 2,
@@ -20,13 +20,13 @@ public class Main {
         no1.setProximoNo(no2);
 
         //Criando e instanciando o no3
-        No no3 = new No("Conteudo no3");
+        No<String> no3 = new No<>("Conteudo no3");
 
         //Apontando no2 para o no3
         no2.setProximoNo(no3);
 
         //Criando e instanciando o no4
-        No no4 = new No("Conteudo no4");
+        No<String> no4 = new No<>("Conteudo no4");
 
         //Apontando no3 para o no4
         no3.setProximoNo(no4);
