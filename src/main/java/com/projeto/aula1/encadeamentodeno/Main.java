@@ -18,7 +18,7 @@ public class Main {
 
         //Apontando no1 para o no2
         no1.setProximoNo(no2);
-
+ 
         //Criando e instanciando o no3
         No<String> no3 = new No<>("Conteudo no3");
 
