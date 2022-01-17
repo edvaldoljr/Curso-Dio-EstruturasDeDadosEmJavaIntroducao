@@ -12,13 +12,20 @@ public class Fila {
     }
 
     //Vamos implementar o método Enqueue que vai enfileirar a nossa Fila
-    public void enqueue(No novoNo) {
+//    public void enqueue(No novoNo) {
+//        novoNo.setRefNo(refNoEntradaFila);
+//        refNoEntradaFila = novoNo;
+//    }
+
+    //refatorando o Método enqueue
+    public void enqueue(Object obj) {
+        No novoNo = new No(obj);
         novoNo.setRefNo(refNoEntradaFila);
         refNoEntradaFila = novoNo;
     }
 
     //Método fist ele vai nos retornar o primeiro No da Fila ou seja o primeiro que chegou na Fila
-    public No first() {
+    public Object first() {
         //Verificamos se a lista não está vazia diferente do método isEmpty, estamos negando ! o isEmpty
         if (!this.isEmpty()) {
             //vamos correr ela por trás
@@ -35,7 +42,7 @@ public class Fila {
                     break;
                 }
             }
-            return primeiroNo;
+            return primeiroNo.getObject();
         }
         //Caso ela esteja vazia retornamos null
         return null;
@@ -43,7 +50,7 @@ public class Fila {
 
     //Vamos implementar o método Dequeue ele chega até ser bem parecido com o first. Só que além dele pegar e retorno o primeiro da fila
     // ele vai tirar da fila esse objeto que ele pegou ele vai pegar o anterior a ele e apontar pro null
-    public No dequeue() {
+    public Object dequeue() {
         //Verificamos se a lista não está vazia diferente do método isEmpty, estamos negando ! o isEmpty
         if (!this.isEmpty()) {
             //vamos correr ela por trás
@@ -63,7 +70,7 @@ public class Fila {
                     break;
                 }
             }
-            return primeiroNo;
+            return primeiroNo.getObject();
         }
         //Caso ela esteja vazia retornamos null
         return null;

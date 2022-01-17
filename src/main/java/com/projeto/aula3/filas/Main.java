@@ -7,10 +7,10 @@ public class Main {
         Fila minhaFila =  new Fila();
 
         //Infileirando um novo No
-        minhaFila.enqueue(new No("Primeiro"));
-        minhaFila.enqueue(new No("Segundo"));
-        minhaFila.enqueue(new No("Terceiro"));
-        minhaFila.enqueue(new No("Quarto"));
+        minhaFila.enqueue("Primeiro");
+        minhaFila.enqueue("Segundo");
+        minhaFila.enqueue("Terceiro");
+        minhaFila.enqueue("Quarto");
 
         System.out.println(minhaFila);
 
