@@ -9,7 +9,7 @@ public class Pilha {
     }
 
     // Método para Inserir elementos na Pilha
-    public  void push(No novoNo){
+    public void push(No novoNo) {
         //estamos criando um variável para guarda a referência de entrada
         No auxiliar = proximoNoEntradaNaPilha;
         proximoNoEntradaNaPilha = novoNo;
@@ -17,13 +17,12 @@ public class Pilha {
     }
 
     // Método para Retirar elementos da Pilha
-    public No Pop() {
+    public No pop() {
         //Se minha pilha não estiver fazia
         if (!this.isEmpty()) {
             No noPoped = proximoNoEntradaNaPilha;
-            proximoNoEntradaNaPilha =proximoNoEntradaNaPilha.getProximoNo();
+            proximoNoEntradaNaPilha = proximoNoEntradaNaPilha.getProximoNo();
             return noPoped;
-
         }
         return null;
     }
@@ -35,11 +34,31 @@ public class Pilha {
 
     //Verifica se nosso No ou lista esta null ou vazio
     public boolean isEmpty() {
-//
 //        if (proximoNoEntradaNaPilha == null) {
-//            return true;
+//            return false;
 //        }
-
         return proximoNoEntradaNaPilha == null ? true : false;
+    }
+
+    @Override
+    public String toString() {
+        String stringRetorno = "-----------\n";
+        stringRetorno += "   Pilha\n";
+        stringRetorno += "-----------\n";
+
+        No noAuxiliar = proximoNoEntradaNaPilha;
+
+        while (true) {
+            //Se for diferente de null
+            if (noAuxiliar != null) {
+                stringRetorno += "[No{dado" + noAuxiliar.getDado() + "}]\n";
+                noAuxiliar = noAuxiliar.getProximoNo();
+            } else {
+                //Se for null vai dar um break
+                break;
+            }
+        }
+        stringRetorno += "===========\n";
+        return stringRetorno;
     }
 }

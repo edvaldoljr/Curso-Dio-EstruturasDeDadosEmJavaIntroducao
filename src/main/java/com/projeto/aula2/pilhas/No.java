@@ -28,4 +28,11 @@ public class No {
     public void setProximoNo(No proximoNo) {
         this.proximoNo = proximoNo;
     }
+
+    @Override
+    public String toString() {
+        return "No{" +
+                "dado=" + dado +
+                '}';
+    }
 }
