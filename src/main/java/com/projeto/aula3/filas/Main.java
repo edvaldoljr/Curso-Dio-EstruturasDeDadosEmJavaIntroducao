@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         //Instanciando a Fila
-        Fila minhaFila =  new Fila();
+        Fila<String> minhaFila =  new Fila();
 
         //Infileirando um novo No
         minhaFila.enqueue("Primeiro");
@@ -19,7 +19,7 @@ public class Main {
 
         System.out.println(minhaFila);
 
-        minhaFila.enqueue(new No("Ultimo"));
+        minhaFila.enqueue("Ultimo");
 
         System.out.println(minhaFila);
 

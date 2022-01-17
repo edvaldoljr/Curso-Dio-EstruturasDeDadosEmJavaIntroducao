@@ -1,9 +1,10 @@
 package com.projeto.aula3.filas;
 
-public class Fila {
+//Refatorando a nossa classe fila
+public class Fila<T> {
 
     //Implementando nossa referencia de entrada na Fila, lembrando que estamos entrando na fila pelo final dela
-    private No refNoEntradaFila;
+    private No<T> refNoEntradaFila;
 
 
     //Construtor, colocamos null para quando instanciar nossa Fila seja vazia
@@ -18,14 +19,14 @@ public class Fila {
 //    }
 
     //refatorando o Método enqueue
-    public void enqueue(Object obj) {
-        No novoNo = new No(obj);
+    public void enqueue(T object) {
+        No novoNo = new No(object);
         novoNo.setRefNo(refNoEntradaFila);
         refNoEntradaFila = novoNo;
     }
 
     //Método fist ele vai nos retornar o primeiro No da Fila ou seja o primeiro que chegou na Fila
-    public Object first() {
+    public T first() {
         //Verificamos se a lista não está vazia diferente do método isEmpty, estamos negando ! o isEmpty
         if (!this.isEmpty()) {
             //vamos correr ela por trás
@@ -42,7 +43,8 @@ public class Fila {
                     break;
                 }
             }
-            return primeiroNo.getObject();
+            //Fazemos um Casting para mostrar nosso tipo genérico
+            return (T) primeiroNo.getObject();
         }
         //Caso ela esteja vazia retornamos null
         return null;
@@ -50,7 +52,7 @@ public class Fila {
 
     //Vamos implementar o método Dequeue ele chega até ser bem parecido com o first. Só que além dele pegar e retorno o primeiro da fila
     // ele vai tirar da fila esse objeto que ele pegou ele vai pegar o anterior a ele e apontar pro null
-    public Object dequeue() {
+    public T dequeue() {
         //Verificamos se a lista não está vazia diferente do método isEmpty, estamos negando ! o isEmpty
         if (!this.isEmpty()) {
             //vamos correr ela por trás
@@ -70,7 +72,8 @@ public class Fila {
                     break;
                 }
             }
-            return primeiroNo.getObject();
+            //Fazemos um Casting para mostrar nosso tipo genérico
+            return (T) primeiroNo.getObject();
         }
         //Caso ela esteja vazia retornamos null
         return null;

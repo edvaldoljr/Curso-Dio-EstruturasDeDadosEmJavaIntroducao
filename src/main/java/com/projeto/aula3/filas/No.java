@@ -1,19 +1,20 @@
 package com.projeto.aula3.filas;
 
-public class No {
+//Refatorando a classe No
+public class No<T> {
 
     //Vamos utilizar o Object para podermos criar qualquer tipo de objeto
-    private Object object; //object é o conteúdo do meu No
+    private T object; //object é o conteúdo do meu No
 
     //Referencia de No
-    private No refNo;
+    private No<T> refNo;
 
     //Construtor vazio
     public No() {
     }
 
     //Construtor recebendo um Object
-    public No(Object object) {
+    public No(T object) {
         this.refNo = null;
         this.object = object;
     }
@@ -22,7 +23,7 @@ public class No {
         return object;
     }
 
-    public void setObject(Object object) {
+    public void setObject(T object) {
         this.object = object;
     }
 
