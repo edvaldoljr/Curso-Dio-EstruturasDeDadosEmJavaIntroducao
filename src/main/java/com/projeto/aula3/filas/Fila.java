@@ -35,6 +35,7 @@ public class Fila {
                     break;
                 }
             }
+            return primeiroNo;
         }
         //Caso ela esteja vazia retornamos null
         return null;
