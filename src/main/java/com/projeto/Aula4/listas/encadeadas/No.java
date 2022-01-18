@@ -17,6 +17,7 @@ public class No<T> {
         this.conteudo = conteudo;
     }
 
+    //Construtor passando o conteúdo e o próximo No
     public No(T conteudo, No proximoNo) {
         this.conteudo = conteudo;
         this.proximoNo = proximoNo;
