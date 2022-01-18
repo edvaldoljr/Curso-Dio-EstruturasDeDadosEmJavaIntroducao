@@ -32,6 +32,4 @@ public class ListaEncadeada<T> {
     public boolean isEmpty(){
         return referenciaEntrada == null ? true : false;
     }
-
-
 }
