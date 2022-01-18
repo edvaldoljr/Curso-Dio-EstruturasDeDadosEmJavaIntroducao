@@ -41,6 +41,18 @@ public class ListaEncadeada<T> {
         return noRetorno;
     }
 
+    //Métono remove()
+    public T remove(int index){
+        No<T> noPivor = this.getNo(index);
+        if (index == 0) {
+            referenciaEntrada = noPivor.getProximoNo();
+            return noPivor.getConteudo();
+        }
+        No<T> noAnterior = getNo(index - 1);
+        noAnterior.setProximoNo(noPivor.getProximoNo());
+        return noPivor.getConteudo();
+    }
+
     //Método size vai retornar o tamanho da minha lista
     public int size(){
         int tamanhoLista = 0;
