@@ -10,7 +10,9 @@ O curso pode ser acessado na plataforma da [Digital Innovation One](http://digit
 • Aula – 1 Introdução ao Curso e Conceitos Básicos
 
 ◦ [ Etapa 1 ] - Apresentação
+
 ◦ [ Etapa 2 ] - Conceito de Memória
+
 ◦ [ Vídeo 3 ] - Instalação e Configuração do Ambiente
 ◦ [ [Etapa 4](https://github.com/edvaldoljr/Curso-Dio-EstruturasDeDadosEmJavaIntroducao/tree/master/src/main/java/com/projeto/aula1/atribuicaoreferencia) ] - Atribuição e Referência em Java
 ◦ [ [Etapa 5](https://github.com/edvaldoljr/Curso-Dio-EstruturasDeDadosEmJavaIntroducao/tree/master/src/main/java/com/projeto/aula1/encadeamentodeno) ] - Conceito de nó e Encadeamento de nó
