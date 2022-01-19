@@ -24,7 +24,7 @@ public class ListaDuplamenteEncadeada<T> {
     public void add(T elemento){
         NoDuplo<T> novoNo = new NoDuplo<>(elemento);
         novoNo.setNoProximo(null);
-        novoNo.setNoProximo(ultimoNo);
+        novoNo.setNoPrevio(ultimoNo);
         if (primeiroNo == null) {
             primeiroNo = novoNo;
         }
