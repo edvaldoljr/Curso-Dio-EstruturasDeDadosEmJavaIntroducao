@@ -1,7 +1,5 @@
 package com.projeto.aula5.lista.dublamente.encadeada;
 
-import com.projeto.Aula4.listas.encadeadas.ListaEncadeada;
-
 public class Main {
 
     public static void main(String[] args) {

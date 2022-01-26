@@ -1,7 +1,5 @@
 package com.projeto.aula5.lista.dublamente.encadeada;
 
-import com.projeto.Aula4.listas.encadeadas.No;
-
 public class ListaDuplamenteEncadeada<T> {
 
     private NoDuplo<T> primeiroNo;
