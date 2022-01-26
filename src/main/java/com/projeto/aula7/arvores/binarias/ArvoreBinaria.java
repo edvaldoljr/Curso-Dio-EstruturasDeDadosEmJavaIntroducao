@@ -123,7 +123,22 @@ public class ArvoreBinaria<T extends  Comparable<T>> {
                     pai.setNoDir(atual.getNoDir());
                 }
             }else {
-
+                for (
+                        temp = atual, filho = atual.getNoEsq();
+                        filho.getNoDir() != null;
+                        temp = filho, filho = filho.getNoDir()
+                ){
+                    if (filho != atual.getNoEsq()){
+                        temp.setNoDir(filho.getNoEsq());
+                        filho.setNoEsq(atual.getNoEsq());
+                    }
+                    filho.setNoDir(atual.getNoDir());
+                    if (pai.getNoEsq() == atual){
+                        pai.setNoEsq(filho);
+                    }else {
+                        pai.setNoDir(filho);
+                    }
+                }
             }
 
         }catch (NullPointerException erro){
